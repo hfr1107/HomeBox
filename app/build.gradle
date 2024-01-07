@@ -1,14 +1,18 @@
 apply plugin: 'com.android.application'
 
+def static buildTime() {
+    return new Date().format("yy'.'MM'.'dd'.'HH'.'mm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
 android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId 'com.github.tvbox.osc'
+        applicationId 'com.github.tvbox.osc.Frank'
         minSdkVersion 18
         targetSdkVersion 26
         versionCode 1
-        versionName '1.0.0'
+        versionName buildTime() //根据打包日期生成版本号
         multiDexEnabled true
         //设置room的Schema的位置
         javaCompileOptions {
@@ -68,7 +72,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation files('libs/thunder.jar')
+    implementation files('libs\\thunder.jar', 'libs\\pyramid.aar')
     implementation files('libs/commons-lang3-3.12.0.jar')
     implementation 'org.conscrypt:conscrypt-android:2.5.2'
     implementation 'com.squareup.okhttp3:okhttp:3.12.11'

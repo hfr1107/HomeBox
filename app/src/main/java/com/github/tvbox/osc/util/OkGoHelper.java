@@ -104,7 +104,7 @@ public class OkGoHelper {
         dnsHttpsList.add("腾讯");
         dnsHttpsList.add("阿里");
         dnsHttpsList.add("360");
-        dnsHttpsList.add("Google");
+        dnsHttpsList.add("谷歌");
         dnsHttpsList.add("AdGuard");
         dnsHttpsList.add("Quad9");
         OkHttpClient.Builder builder = new OkHttpClient.Builder();

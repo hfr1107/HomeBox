@@ -198,6 +198,13 @@
     <methods>;
 }
 
+# 添加 python 支持
+-keep public class com.undcover.freedom.pyramid.** { *; }
+-dontwarn com.undcover.freedom.pyramid.**
+-keep public class com.chaquo.python.** { *; }
+-dontwarn com.chaquo.python.**
+
+
 -keep class com.github.catvod.crawler.*{*;}
 # 迅雷下载模块
 -keep class com.xunlei.downloadlib.** {*;}
